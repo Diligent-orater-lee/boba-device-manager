@@ -4,7 +4,7 @@ from libraries.textToSpeech import TextToSpeech
 
 app = Flask(__name__)
 
-@app.route('/tts/to-speaker', methods=['POST'])
+@app.route('/push-to-assistant/tts', methods=['POST'])
 def text_to_speech():
     if not request.is_json:
         return jsonify({"error": "Request must be JSON"}), 400
